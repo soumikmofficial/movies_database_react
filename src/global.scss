@@ -1,3 +1,8 @@
 $col-accent: hsl(350, 48%, 55%);
 $col-primary: hsl(300, 3%, 8%);
 $col-secondary: white;
+
+@mixin flex-j {
+  display: flex;
+  justify-content: center;
+}
