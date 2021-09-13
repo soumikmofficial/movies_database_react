@@ -1,0 +1,67 @@
+@import "../../global.scss";
+
+.loading,
+.error {
+  @include flex-j;
+  align-items: center;
+  font-size: 2rem;
+  height: 100vh;
+  width: 100%;
+}
+
+.movies {
+  @include flex-j;
+  flex-wrap: wrap;
+  width: 100%;
+
+  & .movie {
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(126, 115, 115, 0.521);
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin: 2rem;
+    overflow: hidden;
+    position: relative;
+    width: 20rem;
+
+    @include bigTab {
+      height: 60%;
+      width: auto;
+    }
+
+    &:hover .info-box {
+      transform: translateY(0%);
+      transition: all 0.3s linear;
+    }
+
+    & .poster-box {
+      height: 100%;
+      width: 100%;
+      & img {
+        height: 100%;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+    & .info-box {
+      background-color: $col-accent;
+      bottom: 0;
+      padding: 1rem 2rem 2rem;
+      position: absolute;
+      transform: translateY(100%);
+      width: 100%;
+
+      & h3 {
+        color: $col-secondary;
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+      }
+
+      & p {
+        color: $col-secondary;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "./global.scss";
+
+.App {
+  background-color: $col-primary;
+  min-height: 100vh;
+  font-family: $font-body;
+  color: $col-secondary;
+}
