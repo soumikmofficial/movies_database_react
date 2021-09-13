@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
         setError({ show: false, message: "" });
         console.log(data);
       } else {
-        setMovies([]);
+        setMovies([...movies]);
         setError({ show: true, message: data.Error });
       }
       setLoading(false);
